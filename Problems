@@ -1,0 +1,24 @@
+//Problem 1
+function colorPatternTimes(cols) {
+   let seconds = cols.length * 2;
+   for(let i = 0; i < cols.length - 1; i++) {
+     if(cols[i] !== cols[i+1]) {
+       seconds++;
+     }
+   }
+   return seconds;
+} 
+
+//Problem 2
+function plant(seed, water, fert, temp) {
+   let stem = "-".repeat(water); 
+   if(temp < 20 || temp > 30) {
+     return stem.repeat(water) + seed;
+   }
+   let flower = seed.repeat(fert);
+   let result = ""; 
+   for(let i = 0; i < water; i++){
+     result += stem + flower;
+   } 
+   return result;
+} 
